@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+  <meta property="og:title" content="受注から納品までの流れ">
+  <meta property="og:description" content="町工場の1件の仕事が、注文を受けてからお客様に届くまでの5つのステップと、つまずきやすいポイントを1枚に整理した図解。">
+  <meta property="og:type" content="article">
+  <title>受注から納品までの流れ</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23FFFFFF'/><rect x='8' y='8' width='84' height='84' rx='14' fill='none' stroke='%2316BCE3' stroke-width='4'/><circle cx='32' cy='40' r='10' fill='%230B72D9' opacity='0.85'/><circle cx='68' cy='40' r='10' fill='%2316BCE3' opacity='0.85'/><rect x='25' y='62' width='50' height='6' rx='3' fill='%231F3A5F' opacity='0.5'/><rect x='30' y='74' width='40' height='6' rx='3' fill='%231F3A5F' opacity='0.25'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            mk: {
+              bg: '#FFFFFF',
+              surface: '#F4FAFD',
+              hover: '#E9F5FA',
+              border: '#DCEBF2',
+              cyan: '#16BCE3',
+              accent: '#0B72D9',
+              tint: '#B9F1FF',
+              text: '#1F3A5F',
+              muted: '#5B7186',
+              dim: '#93A8B8',
+              positive: '#10B981',
+              negative: '#EF4444',
+              warning: '#F59E0B',
+            }
+          },
+          fontFamily: {
+            sans: ['"Noto Sans JP"', '"Hiragino Sans"', '"Hiragino Kaku Gothic ProN"', '"Yu Gothic UI"', '"Meiryo"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @media print {
+      .no-print { display: none !important; }
+      body { border-top: none !important; }
+      .rounded-xl { break-inside: avoid; }
+      .md\:flex-row { flex-direction: row !important; }
+      .md\:hidden { display: none !important; }
+      .hidden.md\:block { display: block !important; }
+      .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+      .sm\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+      .bg-clip-text.text-transparent {
+        -webkit-background-clip: initial !important;
+        background-clip: initial !important;
+        color: #0B72D9 !important;
+        -webkit-text-fill-color: #0B72D9 !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-mk-bg text-mk-muted antialiased leading-relaxed border-t-4 border-mk-cyan">
+  <div class="no-print max-w-3xl mx-auto px-5 pt-2 flex justify-end">
+    <button onclick="window.print()" class="flex items-center gap-1.5 text-xs text-mk-dim hover:text-mk-accent transition-colors cursor-pointer">
+      <i data-lucide="download" class="w-3.5 h-3.5"></i>
+      PDF
+    </button>
+  </div>
+  <main class="max-w-3xl mx-auto px-5 py-10 md:py-16">
+<!-- CONTENT_START -->
+
+    <!-- ヒーロー -->
+    <header class="mb-12 md:mb-16">
+      <span class="inline-block text-xs font-bold tracking-wide text-mk-accent bg-mk-tint/40 border border-mk-cyan/30 rounded-full px-3 py-1 mb-4">業務の見える化</span>
+      <h1 class="text-3xl md:text-4xl font-black text-mk-text leading-snug mb-4">受注から納品までの流れ</h1>
+      <p class="text-base">1件の仕事が、注文を受けてからお客様に届くまで。ひとことで言えば──</p>
+    </header>
+
+    <!-- 一枚絵サマリー -->
+    <section class="mb-12 md:mb-16">
+      <div class="bg-mk-surface border border-mk-border rounded-xl p-6 md:p-8">
+        <p class="text-lg md:text-xl font-bold text-mk-text mb-6">仕事は「受ける → 備える → 作る → 確かめる → 届ける」の5歩で流れる。</p>
+        <!-- コア図解 -->
+        <div class="flex flex-col md:flex-row items-stretch gap-2">
+          <div class="flex-1 bg-white border border-mk-border rounded-lg p-3 text-center">
+            <i data-lucide="inbox" class="w-6 h-6 text-mk-accent mx-auto mb-1.5"></i>
+            <p class="text-sm font-bold text-mk-text">受注</p>
+          </div>
+          <div class="self-center text-mk-dim rotate-90 md:rotate-0"><i data-lucide="chevron-right" class="w-5 h-5"></i></div>
+          <div class="flex-1 bg-white border border-mk-border rounded-lg p-3 text-center">
+            <i data-lucide="package" class="w-6 h-6 text-mk-cyan mx-auto mb-1.5"></i>
+            <p class="text-sm font-bold text-mk-text">材料手配</p>
+          </div>
+          <div class="self-center text-mk-dim rotate-90 md:rotate-0"><i data-lucide="chevron-right" class="w-5 h-5"></i></div>
+          <div class="flex-1 bg-white border border-mk-border rounded-lg p-3 text-center">
+            <i data-lucide="hammer" class="w-6 h-6 text-mk-accent mx-auto mb-1.5"></i>
+            <p class="text-sm font-bold text-mk-text">加工</p>
+          </div>
+          <div class="self-center text-mk-dim rotate-90 md:rotate-0"><i data-lucide="chevron-right" class="w-5 h-5"></i></div>
+          <div class="flex-1 bg-white border border-mk-border rounded-lg p-3 text-center">
+            <i data-lucide="search-check" class="w-6 h-6 text-mk-cyan mx-auto mb-1.5"></i>
+            <p class="text-sm font-bold text-mk-text">検品</p>
+          </div>
+          <div class="self-center text-mk-dim rotate-90 md:rotate-0"><i data-lucide="chevron-right" class="w-5 h-5"></i></div>
+          <div class="flex-1 bg-white border border-mk-border rounded-lg p-3 text-center">
+            <i data-lucide="truck" class="w-6 h-6 text-mk-accent mx-auto mb-1.5"></i>
+            <p class="text-sm font-bold text-mk-text">納品</p>
+          </div>
+        </div>
+        <!-- 身近な接点 -->
+        <div class="flex flex-wrap gap-2 mt-6">
+          <span class="inline-flex items-center gap-1.5 text-xs text-mk-muted bg-white border border-mk-border rounded-full px-3 py-1"><i data-lucide="phone" class="w-3.5 h-3.5 text-mk-accent"></i>電話・FAXの注文</span>
+          <span class="inline-flex items-center gap-1.5 text-xs text-mk-muted bg-white border border-mk-border rounded-full px-3 py-1"><i data-lucide="clipboard-list" class="w-3.5 h-3.5 text-mk-accent"></i>現品票</span>
+          <span class="inline-flex items-center gap-1.5 text-xs text-mk-muted bg-white border border-mk-border rounded-full px-3 py-1"><i data-lucide="file-text" class="w-3.5 h-3.5 text-mk-accent"></i>納品書</span>
+        </div>
+      </div>
+      <p class="text-sm mt-4">ここから、1歩ずつ「誰が・何を・何を見て」動くのかを見ていきます。</p>
+    </section>
+
+    <!-- ステップ詳細 -->
+    <section class="mb-12 md:mb-16">
+      <h2 class="text-xl md:text-2xl font-black text-mk-text mb-6">5つのステップの中身</h2>
+      <div class="space-y-3">
+        <div class="flex gap-4 bg-white border border-mk-border rounded-xl p-4">
+          <div class="shrink-0 w-9 h-9 rounded-full bg-mk-accent text-white font-black flex items-center justify-center">1</div>
+          <div>
+            <p class="font-bold text-mk-text">受注 <span class="text-xs font-normal text-mk-dim ml-2">担当：営業・事務</span></p>
+            <p class="text-sm mt-1">注文書を受け取り、品名・数量・納期を確認する。ここで決まった納期が、以降すべての予定の起点になる。</p>
+          </div>
+        </div>
+        <div class="flex gap-4 bg-white border border-mk-border rounded-xl p-4">
+          <div class="shrink-0 w-9 h-9 rounded-full bg-mk-cyan text-white font-black flex items-center justify-center">2</div>
+          <div>
+            <p class="font-bold text-mk-text">材料手配 <span class="text-xs font-normal text-mk-dim ml-2">担当：事務・現場</span></p>
+            <p class="text-sm mt-1">在庫を確認し、足りない材料を発注する。材料の到着日で加工の開始日が決まる。</p>
+          </div>
+        </div>
+        <div class="flex gap-4 bg-white border border-mk-border rounded-xl p-4">
+          <div class="shrink-0 w-9 h-9 rounded-full bg-mk-accent text-white font-black flex items-center justify-center">3</div>
+          <div>
+            <p class="font-bold text-mk-text">加工 <span class="text-xs font-normal text-mk-dim ml-2">担当：現場</span></p>
+            <p class="text-sm mt-1">図面と現品票（その品物の指示書）を見ながら加工する。段取り替え（機械の設定変更）の回数が時間を左右する。</p>
+          </div>
+        </div>
+        <div class="flex gap-4 bg-white border border-mk-border rounded-xl p-4">
+          <div class="shrink-0 w-9 h-9 rounded-full bg-mk-cyan text-white font-black flex items-center justify-center">4</div>
+          <div>
+            <p class="font-bold text-mk-text">検品 <span class="text-xs font-normal text-mk-dim ml-2">担当：現場・品質</span></p>
+            <p class="text-sm mt-1">寸法・見た目を検査し、合格したものだけを梱包する。ここで不良を見つければ、お客様には届かない。最後の砦。</p>
+          </div>
+        </div>
+        <div class="flex gap-4 bg-white border border-mk-border rounded-xl p-4">
+          <div class="shrink-0 w-9 h-9 rounded-full bg-mk-accent text-white font-black flex items-center justify-center">5</div>
+          <div>
+            <p class="font-bold text-mk-text">納品 <span class="text-xs font-normal text-mk-dim ml-2">担当：事務・配送</span></p>
+            <p class="text-sm mt-1">納品書を添えて出荷する。売上台帳への記帳もこのタイミング。ここまで終わって、1件の仕事が完了する。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- つまずき対比 -->
+    <section class="mb-12 md:mb-16">
+      <h2 class="text-xl md:text-2xl font-black text-mk-text mb-2">つまずきやすいのは「歩と歩のあいだ」</h2>
+      <p class="text-sm mb-6">トラブルはステップの中ではなく、受け渡しの瞬間に起きやすい。</p>
+      <div class="grid md:grid-cols-2 gap-4">
+        <div class="border border-mk-negative/30 rounded-xl overflow-hidden">
+          <div class="bg-mk-negative/10 px-4 py-2 flex items-center gap-2">
+            <i data-lucide="x" class="w-4 h-4 text-mk-negative"></i>
+            <p class="text-sm font-bold text-mk-negative">よくあるつまずき</p>
+          </div>
+          <ul class="p-4 space-y-2 text-sm">
+            <li>納期の変更が現場に伝わっていない</li>
+            <li>材料の到着遅れに気づくのが加工当日</li>
+            <li>検品の記録が残っておらず、後から追えない</li>
+          </ul>
+        </div>
+        <div class="border border-mk-positive/30 rounded-xl overflow-hidden">
+          <div class="bg-mk-positive/10 px-4 py-2 flex items-center gap-2">
+            <i data-lucide="check" class="w-4 h-4 text-mk-positive"></i>
+            <p class="text-sm font-bold text-mk-positive">流れが良い時の共通点</p>
+          </div>
+          <ul class="p-4 space-y-2 text-sm">
+            <li>変更があったら、その日のうちに現品票を直す</li>
+            <li>材料の到着予定を、受注時に一度だけ全員で確認</li>
+            <li>検品結果を1行でも書き残す</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- まとめ -->
+    <section>
+      <h2 class="text-xl md:text-2xl font-black text-mk-text mb-6">この図解の持ち帰り</h2>
+      <div class="bg-mk-surface border border-mk-border rounded-xl p-6 space-y-3">
+        <div class="flex items-start gap-3">
+          <i data-lucide="footprints" class="w-5 h-5 text-mk-accent mt-0.5 shrink-0"></i>
+          <p class="text-sm"><span class="font-bold text-mk-text">仕事は5歩で流れる。</span>受ける → 備える → 作る → 確かめる → 届ける。</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <i data-lucide="alert-triangle" class="w-5 h-5 text-mk-warning mt-0.5 shrink-0"></i>
+          <p class="text-sm"><span class="font-bold text-mk-text">トラブルは受け渡しの瞬間に起きる。</span>ステップの中よりも「あいだ」を見張る。</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <i data-lucide="pencil-line" class="w-5 h-5 text-mk-cyan mt-0.5 shrink-0"></i>
+          <p class="text-sm"><span class="font-bold text-mk-text">紙1枚・1行の記録が流れを守る。</span>現品票と検品メモは全ステップの共通言語。</p>
+        </div>
+      </div>
+    </section>
+
+<!-- CONTENT_END -->
+  </main>
+  <footer class="max-w-3xl mx-auto px-5 pb-10 pt-6 border-t border-mk-border/40">
+    <p class="text-xs text-mk-dim text-center">MAKASERU 図解化スキルで作成</p>
+  </footer>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>
